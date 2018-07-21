@@ -1,0 +1,44 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "gdb",
+            "request": "launch",
+            
+            "name": "Launch Program",
+            "target": "${workspaceFolder}/HelloWorld.exe",
+            "cwd": "${workspaceRoot}"
+        },
+        {
+            "name": "(gdb) Launch",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/HelloWorld.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "targetArchitecture": "x64",
+            "environment": [],
+            "externalConsole": true,
+           
+            "linux": {
+                "MIMode": "gdb",
+                "miDebuggerPath": "/usr/bin/gdb",       
+                "setupCommands": [
+                    {
+                        "description": "Enable pretty-printing for gdb",
+                        "text": "-enable-pretty-printing",
+                        "ignoreFailures": true
+                    }
+                ],
+            },
+            "windows": {
+                "MIMode": "gdb",
+                "miDebuggerPath": "c:\\MinGW\\bin\\gdb.exe"       
+            }
+        }
+    ]
+}
