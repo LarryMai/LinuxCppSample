@@ -40,7 +40,8 @@ int main(int argc, char const *argv[])
        auto users =  dataHolder->GetUsers();
        for(int i =0; i< users.size();++i)
        {
-           std::cout << users[i].Name << std::endl;
+           const char * tempStr = users[i].Name.c_str();
+           std::cout << tempStr << std::endl;
        }
     }
     std::cout << "Hello World" << std::endl;

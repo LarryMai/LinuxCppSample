@@ -6,10 +6,10 @@
         {
             "label": "build hello world",
             "type": "shell",
-            "command": "clang++",
+            "command": "g++",
             "args": [
-               
                 "-g",
+                "--std=c++11",
                 "-v",
                 "DataAccessor.cpp",
                 "main.cpp",
@@ -18,7 +18,11 @@
             ],
             "problemMatcher": [
                 "$gcc"
-            ]
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
         }
     ]
 }
