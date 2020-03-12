@@ -5,7 +5,7 @@ using namespace  std;
 
 int  main( int  argc, char const  *argv[ ] )
 {
-	std::string  pattern = "([A-Za-z]+)([0-9]+)"; //準備轉換成正規式物件
+	std::string  pattern = "([A-Za-z]+)([0-9]+)"; //準備轉換成正則式物件
 	std::string  input   = "KKKtry23";
 	regex  reg( pattern ); //前方為英文字母,後方為數字 <--用兩組小括號設定了分割點
 
@@ -22,7 +22,7 @@ int  main( int  argc, char const  *argv[ ] )
 }
 
 /*
-$ g++ maatch.cpp -o match
+$ g++ match.cpp -o match
 $ ./match
 sm[ 0 ] = test123  <-- i = 0
 sm[ 1 ] = test  <-- i = 1
