@@ -5,9 +5,9 @@ using namespace  std;
 
 int  main( int  argc, char const  *argv[ ] )
 {
-	std::string  pattern = "([A-Za-z]+)([0-9]+)"; //準備轉換成正則式物件
+	std::string  pattern = "([A-Za-z]+)([0-9]+)"; //前方為英文字母,後方為數字 <--有兩組小括號
 	std::string  input   = "KKKtry23";
-	regex  reg( pattern ); //前方為英文字母,後方為數字 <--用兩組小括號設定了分割點
+	regex  reg( pattern );                        //轉換成正則式物件 <--設定成兩個子字串
 
 	smatch  sm;
 	if( regex_match( input, sm, reg ) )
